@@ -29,7 +29,7 @@
 
 SoftwareSerial mySerial(10, 11); // RX, TX
 
-void setup()  
+void setup()
 {
   // Open serial communications and wait for port to open:
   Serial.begin(57600);
@@ -37,11 +37,7 @@ void setup()
     ; // wait for serial port to connect. Needed for Leonardo only
   }
 
-  for(int x = 0; x< 100000; x++){
-    Serial.println("Goodnight moon!");
-    Serial.println("tomxue");
-    Serial.println(x);
-  }
+  Serial.println("Goodnight moon!");
 
   // set the data rate for the SoftwareSerial port
   mySerial.begin(4800);
@@ -51,7 +47,9 @@ void setup()
 void loop() // run over and over
 {
   if (mySerial.available())
+  {
     Serial.write(mySerial.read());
-  if (Serial.available())
-    mySerial.write(Serial.read());
+    //delay(1000);
+    //Serial.println("next line");
+  }
 }
