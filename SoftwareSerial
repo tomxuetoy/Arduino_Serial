@@ -37,7 +37,7 @@ void setup()
     ; // wait for serial port to connect. Needed for Leonardo only
   }
 
-  for(int x = 0; x< 10; x++){
+  for(int x = 0; x< 100000; x++){
     Serial.println("Goodnight moon!");
     Serial.println("tomxue");
     Serial.println(x);
