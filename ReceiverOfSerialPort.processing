@@ -4,10 +4,11 @@ int p_data;
 Serial myPort;
 
 void setup() {
-  myPort = new Serial(this,"COM4", 57600);
+  myPort = new Serial(this,"COM11", 57600);
 }
 
 void draw() {
   p_data = myPort.read();
-  print(char(p_data));
+  if(p_data >=0 && p_data <= 127)
+    print(char(p_data));
 }
